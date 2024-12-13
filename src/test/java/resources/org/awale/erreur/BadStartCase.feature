@@ -3,7 +3,23 @@ Feature: Le joueur choisi une case impossible donc c'est a nouveau a lui
   # Enter feature description here
 
   Scenario: Le joueur choisi une case vide
-
-  Scenario: Le joueur choisi une case adverse
+    Given le joueur 1 est de type 1
+    And le joueur 2 est de type 1
+    And le plateau est le suivant
+        | 3;3 |     |     | 3;3 |
+        |     |     |     |     |
+        |     |     |     |     |
+        | 3;3 |     |     | 3;3 |
+    When le joueur 1 joue en (3;3) avec un galet de type 1
+    Then le joueur 1 joue encore
 
   Scenario: Le joueur choisi une case en dehors
+    Given le joueur 1 est de type 1
+    And le joueur 2 est de type 1
+    And le plateau est le suivant
+        | 3;3 |     |     | 3;3 |
+        |     |     |     |     |
+        |     |     |     |     |
+        | 3;3 |     |     | 3;3 |
+    When le joueur 1 joue en (4;4) avec un galet de type 1
+    Then le joueur 1 joue encore

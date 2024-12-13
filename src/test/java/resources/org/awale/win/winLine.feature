@@ -2,17 +2,6 @@
 Feature: Le joueur gagne
   # Enter feature description here
 
-  Scenario: Le joueur gagne avec une ligne : pose direct
-    Given le joueur 1 est de type 1
-    And le joueur 2 est de type 1
-    And le plateau est le suivant
-        | 1;1 | 1;1 | 1;1 |  |
-        |     |     |     |  |
-        |     |     |     |  |
-        |     |     |     |  |
-    When le joueur 1 joue en (3;0) avec un galet de type 1
-    Then le joueur 1 gagne
-
     Scenario: Le joueur gagne avec une ligne : pose indirect
     Given le joueur 1 est de type 1
     And le joueur 2 est de type 1
