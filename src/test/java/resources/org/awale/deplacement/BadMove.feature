@@ -8,10 +8,11 @@ Feature: # Enter feature name here
   Scenario: Le Joeueur revient en arriere
     # Enter steps here
 
-  Scenario: Le joueur pose plusieurs sur la meme case
+  Scenario: Le joueur pose plusieurs galets sur la meme case
 
   Scenario: Le joueur pose pas le galet courant
 
-  Scenario: Le joueur pose un galet sur une case mais deplace une autre case
-
   Scenario: Le joueur pose un galet adverse
+
+  Scenario: Le joueur pose un galet sur une case vide
+  # Enter steps here
