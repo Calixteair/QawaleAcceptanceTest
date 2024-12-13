@@ -4,7 +4,7 @@ Feature: # Enter feature name here
 
 
 
-  Scenario: Placement gallet vide
+  Scenario: Placement gallet sur une case vide
     Given le joueur 1 est de type 1
     And le joueur 2 est de type 2
     And le plateau est le suivant:

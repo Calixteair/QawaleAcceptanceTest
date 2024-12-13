@@ -10,7 +10,7 @@ Feature: Le joueur choisi une case impossible donc c'est a nouveau a lui
         |     |     |     |     |
         |     |     |     |     |
         | 3;3 |     |     | 3;3 |
-    When le joueur 1 joue en (3;3) avec un galet de type 1
+    When le joueur 1 joue en (2;2) avec un galet de type 1
     Then le joueur 1 joue encore
 
   Scenario: Le joueur choisi une case en dehors

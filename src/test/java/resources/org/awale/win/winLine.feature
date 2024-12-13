@@ -11,9 +11,9 @@ Feature: Le joueur gagne
         |     |     |     |     |
         |     |     |     | 2;3 |
     When le joueur 1 joue en (3;3) avec un galet de type 1
-    And le joueur 1 deplace le galet courant en (3;2)
-    And le joueur 1 deplace le galet courant en (3;1)
-    And le joueur 1 deplace le galet courant en (3;0)
+    And le joueur 1 deplace le galet courant en (2;3)
+    And le joueur 1 deplace le galet courant en (1;3)
+    And le joueur 1 deplace le galet courant en (0;3)
     Then le joueur 1 gagne
 
     Scenario: Le joueur gagne avec une ligne : pose indirect pendant le deplacement
@@ -25,9 +25,9 @@ Feature: Le joueur gagne
         |     |     |     |     |
         |     |     |     | 2;1 |
     When le joueur 1 joue en (3;3) avec un galet de type 1
-    And le joueur 1 deplace le galet courant en (3;2)
-    And le joueur 1 deplace le galet courant en (3;1)
-    And le joueur 1 deplace le galet courant en (3;0)
+    And le joueur 1 deplace le galet courant en (2;3)
+    And le joueur 1 deplace le galet courant en (1;3)
+    And le joueur 1 deplace le galet courant en (0;3)
     Then le joueur 1 gagne
 
 
@@ -39,9 +39,9 @@ Feature: Le joueur gagne
         | 3;2 | 1;2 | 3;2 |     |
         |     |     |     |  2  |
         |     |     |     |     |
-    When le joueur 1 joue en (3;2) avec un galet de type 1
-    And le joueur 1 deplace le galet courant en (3;1)
-    And le joueur 1 deplace le galet courant en (3;0)
+    When le joueur 1 joue en (2;3) avec un galet de type 1
+    And le joueur 1 deplace le galet courant en (1;3)
+    And le joueur 1 deplace le galet courant en (0;3)
     Then le joueur 2 gagne
 
 

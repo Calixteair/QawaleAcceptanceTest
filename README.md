@@ -14,9 +14,9 @@ On se base sur les regles du jeu trouver sur : https://export.gigamic.com/wp-con
 
 #### **CONTENU**
 - 1 plateau de jeu  
-- 8 galets clairs  
-- 8 galets foncés  
-- 8 galets orangés  
+- 8 galets clairs  1
+- 8 galets foncés  2
+- 8 galets orangés  3
 - La règle du jeu
 
 ---
@@ -46,12 +46,10 @@ Réaliser un alignement de **4 galets visibles** de sa couleur en **ligne**, en 
    - Une fois le galet placé, **l’ensemble de la pile** (y compris le galet fraîchement posé) doit être égrainé.  
      - Commencez à déplacer les galets **depuis une case voisine**.  
      - Les galets doivent être déposés **un par un** sur des cases adjacentes.  
-       (*Les diagonales sont interdites.*)  
-       *Voir Figure 3a pour un exemple.*
+       (*Les diagonales sont interdites.*)
 
 3. **Règles de déplacement :**  
-   - **Pas d’aller-retour immédiat** : il est interdit de revenir sur une case qui vient d’être visitée.  
-     (*Voir Figure 3b pour un exemple.*)  
+   - **Pas d’aller-retour immédiat** : il est interdit de revenir sur une case qui vient d’être visitée.
    - Les boucles sont permises : un joueur peut repasser sur une case après un détour.
 
 ---
@@ -59,7 +57,7 @@ Réaliser un alignement de **4 galets visibles** de sa couleur en **ligne**, en 
 #### **FIN DE LA PARTIE**
 - La partie se termine lorsque :
   1. Un joueur aligne **4 galets visibles** de sa couleur en **ligne, colonne ou diagonale**.  
-     Il est déclaré vainqueur. (*Voir Figure 4 pour un exemple.*)
+     Il est déclaré vainqueur.
   2. Tous les galets des deux joueurs sont posés sans qu’aucun alignement ne soit réalisé :  
      La partie se termine par une égalité.
 
@@ -67,7 +65,7 @@ Réaliser un alignement de **4 galets visibles** de sa couleur en **ligne**, en 
 - Un galet est **visible** lorsqu’il est :
   - Seul sur une case  
   - Au sommet d’une pile  
-- Un empilement vertical de **4 galets de la même couleur** ne compte pas comme un alignement. (*Voir Figure 5.*)
+- Un empilement vertical de **4 galets de la même couleur** ne compte pas comme un alignement.
 
 ---
 
