@@ -10,9 +10,9 @@ Feature: le joueur ne gagne pas
         |     |     |     |     |
         |     |     |     |     |
     When le joueur 1 joue en (0;0) avec un galet de type 1
-    And le joueur 1 déplace le galet courant en (0;1)
-    And le joueur 1 déplace le galet courant en (0;2)
-    And le joueur 1 déplace le galet courant en (0;3)
+    And le joueur 1 deplace le galet courant en (0;1)
+    And le joueur 1 deplace le galet courant en (0;2)
+    And le joueur 1 deplace le galet courant en (0;3)
     Then la pile (0;0) contient 4 galets de type 1
     And le joueur 1 ne gagne pas
 

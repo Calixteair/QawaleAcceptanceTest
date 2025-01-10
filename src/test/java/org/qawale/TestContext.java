@@ -1,4 +1,4 @@
-package org.awale;
+package org.qawale;
 
 public class TestContext {
 
@@ -7,4 +7,6 @@ public class TestContext {
     public static MyWorld getMyWorld() {
         return myWorld;
     }
+
+
 }

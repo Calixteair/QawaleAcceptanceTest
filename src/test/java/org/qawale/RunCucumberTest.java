@@ -1,4 +1,4 @@
-package org.awale;
+package org.qawale;
 
 import org.junit.platform.suite.api.ConfigurationParameter;
 import org.junit.platform.suite.api.IncludeEngines;

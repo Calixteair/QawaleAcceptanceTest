@@ -8,6 +8,9 @@ Galet joueur 1 : 1
 Galet joueur 2 : 2
 Galet Neutre : 3
 
+mvn install:install-file -Dfile=path/to/qawale-1.0-SNAPSHOT.jar -DgroupId=com.qawale -DartifactId=qawale -Dversion=1.0-SNAPSHOT -Dpackaging=jar
+
+
 On se base sur les regles du jeu trouver sur : https://export.gigamic.com/wp-content/uploads/2022/08/GIGAMIC_GCQW_QAWALE_RULES-MLV_08-2022_BD.pdf
 
 ### **Règles du jeu**
