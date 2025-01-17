@@ -4,6 +4,11 @@ import com.qawale.Board;
 import com.qawale.Game;
 import com.qawale.Player;
 
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+
 public class MyWorld {
     private Game game;
     private Board board;
@@ -11,11 +16,13 @@ public class MyWorld {
     private Player player2;
 
     public MyWorld() {
-        // Initialisation de l'état du jeu
+        // Initialisation de l'état du jeu mock
         player1 = new Player("Joueur 1", "1");
         player2 = new Player("Joueur 2", "1");
-        board = new Board(4, 4);  // Plateau 4x4
-        game = new Game(board, player1, player2);
+        board = mock(Board.class);
+        game = mock(Game.class);
+
+
     }
 
     public Game getGame() {

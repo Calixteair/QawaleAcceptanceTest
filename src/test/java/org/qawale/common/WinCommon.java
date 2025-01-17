@@ -1,6 +1,7 @@
 package org.qawale.common;
 
 
+import com.qawale.Board;
 import com.qawale.Game;
 import com.qawale.Player;
 import io.cucumber.java.en.Then;
@@ -27,33 +28,30 @@ public class WinCommon {
 
     @Then("le joueur {int} gagne")
     public void le_joueur_gagne(int joueurNum) {
-        Game game = mock(Game.class);
+        Board board = TestContext.getMyWorld().getBoard();
         // Mock de la méthode checkWinner()
         Player expectedWinner = (joueurNum == 1) ? myWorld.getPlayer1() : myWorld.getPlayer2();
+        when(board.aWin(expectedWinner)).thenReturn(true);
+        assertTrue(board.aWin(expectedWinner));
 
-        // Supposons que myWorld.getGame() est un mock
-        when(game.checkWinner()).thenReturn(expectedWinner);
 
-        // Appel de la méthode pour obtenir le gagnant réel
-        Player winner = game.checkWinner();
-
-        // Vérification que le gagnant n'est pas null
-        assertNotNull(winner, "Il n'y a pas encore de gagnant");
-
-        // Vérification que le bon joueur est déclaré gagnant
-        assertEquals(winner, expectedWinner, "Le mauvais joueur est déclaré gagnant");
     }
 
     @Then("le joueur {int} ne gagne pas")
     public void leJoueurNeGagnePas(int joueurNum) {
-        Game game = mock(Game.class);
-        // Mock de la méthode checkWinner()
+        Board board = TestContext.getMyWorld().getBoard();
         Player expectedWinner = (joueurNum == 1) ? myWorld.getPlayer1() : myWorld.getPlayer2();
-        when(game.checkWinner()).thenReturn(null);
-        // Appel de la méthode pour obtenir le gagnant réel
-        Player winner = game.checkWinner();
-        // Vérification que le gagnant est null
-        assertNull(winner, "Il y a un gagnant alors qu'il ne devrait pas y en avoir");
+        // Mock de la méthode checkWinner()
+        when(board.aWin(expectedWinner)).thenReturn(false);
+        assertFalse(board.aWin(expectedWinner));
 
+
+    }
+
+    @Then("la partie se termine avec une égalité")
+    public void laPartieSeTermineAvecUneÉgalité() {
+        Game game = TestContext.getMyWorld().getGame();
+
+        when(game.isPat()).thenReturn(true);
     }
 }

@@ -4,6 +4,8 @@ package org.qawale.common;
 import com.qawale.Board;
 import com.qawale.Game;
 import com.qawale.Player;
+import com.qawale.Stone;
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import org.qawale.MyWorld;
@@ -28,11 +30,36 @@ public class SetupCommon {
     }
 
     @Given("le plateau est le suivant")
-    public void le_plateau_est_le_suivant(io.cucumber.datatable.DataTable dataTable) {
-        Board mockBoard = mock(Board.class);
-        when(mockBoard.placeStone(anyInt(), anyInt(), any(), any())).thenReturn(true);
-        when(mockBoard.moveCurrentStone(anyInt(), anyInt(), any())).thenReturn(true);
-        when(mockBoard.checkWinningCondition()).thenReturn(myWorld.getPlayer1());  // Simule un gagnant
+    public void le_plateau_est_le_suivant(DataTable dataTable) {
+        Board mockBoard = myWorld.getBoard();
+        Player currentPlayer = myWorld.getPlayer1();
+        Player otherPlayer = myWorld.getPlayer2();
+
+        // On initialise le plateau avec les données de la table
+        dataTable.asLists().forEach(row -> {
+            if (row.isEmpty()) {
+                return;
+            }
+            for (int i = 0; i < row.size(); i++) {
+                String cellValue = row.get(i);
+                if (cellValue == null || cellValue.isEmpty()) {
+                    continue;
+                }
+                String[] stones = cellValue.split(";");
+                for (String stone : stones) {
+                    if (stone.isEmpty()) {
+                        continue;
+                    }
+                    if (stone.equals("1")) {
+                        mockBoard.placeStone(i, row.indexOf(cellValue), new Stone(1), currentPlayer);
+                    } else if (stone.equals("2")) {
+                        mockBoard.placeStone(i, row.indexOf(cellValue), new Stone(2), otherPlayer);
+                    } else {
+                        mockBoard.placeStone(i, row.indexOf(cellValue), new Stone(0), null);
+                    }
+                }
+            }
+        });
     }
 
 

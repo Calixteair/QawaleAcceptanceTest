@@ -10,9 +10,7 @@ Feature: il n'y a plus de galet a jouer
 
 
   Scenario: Partie nulle
-    Given tous les galets sont placés
-    And aucun joueur n'a aligné 4 galets visibles
-    And le plateau est le suivant
+    Given le plateau est le suivant
       | 1;1 | 2;2 | 1;1 | 2;2 |
       | 2;2 | 2;2 | 2;2 | 1;1 |
       | 1;1 | 1;1 | 1;1 | 2;2 |

@@ -11,7 +11,7 @@ Feature: Le joueur choisi une case impossible donc c'est a nouveau a lui
         |     |     |     |     |
         | 3;3 |     |     | 3;3 |
     When le joueur 1 joue en (2;2) avec un galet de type 1
-    Then le joueur 1 joue encore
+    Then le tour du joueur actuel est 1
 
   Scenario: Le joueur choisi une case en dehors
     Given le joueur 1 est de type 1
@@ -22,4 +22,4 @@ Feature: Le joueur choisi une case impossible donc c'est a nouveau a lui
         |     |     |     |     |
         | 3;3 |     |     | 3;3 |
     When le joueur 1 joue en (4;4) avec un galet de type 1
-    Then le joueur 1 joue encore
+    Then le tour du joueur actuel est 1
