@@ -58,4 +58,10 @@ public class PlayCommon {
         myWorld.getGame().playStone(row2, col2, myWorld.getPlayer1(), 1);
         myWorld.getGame().playStone(row3, col3, myWorld.getPlayer1(), 1);
     }
+
+    @And("place la pile sur la case [\\({int};{int})]")
+    public void placeLaPileSurLaCase(int row1, int col1) {
+        when(myWorld.getGame().playStone(row1, col1, myWorld.getPlayer1(), 1)).thenReturn(true);
+        myWorld.getGame().playStone(row1, col1, myWorld.getPlayer1(), 1);
+    }
 }
