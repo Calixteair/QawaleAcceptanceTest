@@ -1,5 +1,6 @@
 package org.qawale;
 
+import com.qawale.AI;
 import com.qawale.Board;
 import com.qawale.Game;
 import com.qawale.Player;
@@ -14,6 +15,7 @@ public class MyWorld {
     private Board board;
     private Player player1;
     private Player player2;
+    private AI ailogique;
 
     public MyWorld() {
         // Initialisation de l'état du jeu mock
@@ -21,6 +23,9 @@ public class MyWorld {
         player2 = new Player("Joueur 2", "1");
         board = mock(Board.class);
         game = mock(Game.class);
+        ailogique = mock(AI.class);
+
+        when(game.getAI()).thenReturn(ailogique);
 
 
     }
@@ -39,5 +44,9 @@ public class MyWorld {
 
     public Board getBoard() {
         return board;
+    }
+
+    public AI getAI(){
+        return ailogique;
     }
 }

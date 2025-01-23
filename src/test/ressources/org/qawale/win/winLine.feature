@@ -4,7 +4,7 @@ Feature: Le joueur gagne
 
     Scenario: Le joueur gagne avec une ligne : pose indirect
     Given le joueur 1 est de type 1
-    And le joueur 2 est de type 1
+    And le joueur 2 est de type 2
     And le plateau est le suivant
         | 1;1 | 1;1 | 1;1 |     |
         |     |     |     |     |
@@ -18,7 +18,7 @@ Feature: Le joueur gagne
 
     Scenario: Le joueur gagne avec une ligne : pose indirect pendant le deplacement
     Given le joueur 1 est de type 1
-    And le joueur 2 est de type 1
+    And le joueur 2 est de type 2
     And le plateau est le suivant
         |     |     |     |     |
         | 1;1 | 1;1 | 1;1 |     |
@@ -33,7 +33,7 @@ Feature: Le joueur gagne
 
     Scenario: Le joueur fait gagner l'adversaire avec une ligne
     Given le joueur 1 est de type 1
-    And le joueur 2 est de type 1
+    And le joueur 2 est de type 2
     And le plateau est le suivant
         |     |     |     |     |
         | 3;2 | 1;2 | 3;2 |     |

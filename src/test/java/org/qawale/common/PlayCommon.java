@@ -64,4 +64,14 @@ public class PlayCommon {
         when(myWorld.getGame().playStone(row1, col1, myWorld.getPlayer1(), 1)).thenReturn(true);
         myWorld.getGame().playStone(row1, col1, myWorld.getPlayer1(), 1);
     }
+
+
+
+    @When("l'ia joue le coup est [\\({int};{int}),\\({int};{int}),\\({int};{int}),\\({int};{int})]")
+    public void lIaJoueLeCoupEst(int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7) {
+        when(myWorld.getGame().getAI().canWin()).thenReturn(true);
+        int[][] move = {{arg0, arg1}, {arg2, arg3}, {arg4, arg5}, {arg6, arg7}};
+        when(myWorld.getGame().getAI().getMove()).thenReturn(move);
+        myWorld.getGame().getAI().getMove();
+    }
 }

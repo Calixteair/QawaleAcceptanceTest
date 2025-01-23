@@ -3,7 +3,7 @@ Feature: le joueur ne gagne pas
 
   Scenario: le joueur 1 empile 4 galets sur une case
     Given le joueur 1 est de type 1
-    And le joueur 2 est de type 1
+    And le joueur 2 est de type 2
     And le plateau est le suivant
         | 1;1 | 1;1 | 1;1;1 |     |
         |     |     |     |     |
@@ -18,7 +18,7 @@ Feature: le joueur ne gagne pas
 
   Scenario: Le joueur gagne puis cancel sa victoire
     Given le joueur 1 est de type 1
-    And le joueur 2 est de type 1
+    And le joueur 2 est de type 2
     And le plateau est le suivant
         |     |     |     |     |
         | 1;1 | 1;1 | 1;1 |     |

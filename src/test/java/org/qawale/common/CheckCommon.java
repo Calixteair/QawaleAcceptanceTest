@@ -37,4 +37,9 @@ public class CheckCommon {
         assertEquals(joueurNum, Integer.parseInt(currentPlayer.getType()));
     }
 
+    @Then("le joueur {int} ne peut pas gagner")
+    public void leJoueurNePeutPasGagner(int arg0) {
+        when(myWorld.getGame().getAI().canWin()).thenReturn(false);
+        myWorld.getGame().getAI().canWin();
+    }
 }
